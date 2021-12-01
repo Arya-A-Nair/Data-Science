@@ -20,4 +20,6 @@ mean = df['normalized-losses'].mean()
 #replacing the NaN values of column with mean of the column
 df['normalized-losses'] =df['normalized-losses'].fillna(mean)
 
+#to save the new data to a new file
+df.to_csv("corrected_data2.csv")
 print(df)
