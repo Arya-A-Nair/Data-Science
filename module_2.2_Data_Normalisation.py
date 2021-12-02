@@ -17,7 +17,6 @@ df=pd.read_csv("corrected_data3.csv")
 #Simple feature scaling
 df["length"]=df["length"]/df["length"].max()
 
-
 #Min-Max normalisation
 df["length"]=(df["length"]-df["length"].min())/(df["length"].max()-df["length"].min())
 
