@@ -16,4 +16,13 @@ df=pd.read_csv("corrected_data3.csv")
 '''
 #Simple feature scaling
 df["length"]=df["length"]/df["length"].max()
-print(df["length"])
+
+
+#Min-Max normalisation
+df["length"]=(df["length"]-df["length"].min())/(df["length"].max()-df["length"].min())
+
+#Z-score normalisation
+df["length"]=(df["length"]-df["length"].mean())/df["length"].std()
+
+#To write the data to the csv file
+df.to_csv("corrected_data4.csv")
